@@ -165,25 +165,28 @@
     </div>
 
     <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('#image-slider img');
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('#image-slider img');
 
-        function showSlide(n) {
-            slides[currentSlide].style.opacity = 0;
-            currentSlide = (n + slides.length) % slides.length;
-            slides[currentSlide].style.opacity = 1;
-        }
+    function showSlide(n) {
+        slides[currentSlide].style.opacity = 0;
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].style.opacity = 1;
+    }
 
-        function prevSlide() {
-            showSlide(currentSlide - 1);
-        }
+    function prevSlide() {
+        showSlide(currentSlide - 1);
+    }
 
-        function nextSlide() {
-            showSlide(currentSlide + 1);
-        }
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
 
-        // Start with the first slide displayed
-        showSlide(currentSlide);
-    </script>
+    // Start with the first slide displayed
+    showSlide(currentSlide);
+
+    // Automatically change slide every 3 seconds
+    setInterval(nextSlide, 5000);
+</script>
 </body>
 </html>
