@@ -1,0 +1,484 @@
+<!-- https://icons8.com/line-awesome-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSIL | TS2</title>
+    <link rel="icon" href="../images/tsilfaviconn.png" type="image/png" sizes="32x32">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+        }
+
+        body {
+            background: #fff;
+            overflow-y: hidden;
+        }
+
+        .wrapper .header {
+            z-index: 1;
+            background: #22242A;
+            position: fixed;
+            width: calc(100% - 0%);
+            height: 50px;
+            display: flex;
+            top: 0;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        .wrapper .header .header-menu {
+            width: calc(100% - 0%);
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+        }
+
+        /*--Side Menu header---*/
+        .wrapper .header .header-menu .title {
+            color: #fff;
+            font-size: 18px;
+            /*text-transform: uppercase;---*/
+            font-weight: 900;
+        }
+
+        .wrapper .header .header-menu .title span {
+            color: #4CCEE8;
+            font-size: 16px;
+        }
+
+        /*-------------------*/
+
+        .wrapper .header .header-menu .sidebar-btn {
+            color: #fff;
+            position: absolute;
+            margin-left: 190px;
+            font-size: 22px;
+            font-weight: 900;
+            cursor: pointer;
+            transition: 0.3s;
+            transition-property: color;
+        }
+
+        .wrapper .header .header-menu .sidebar-btn:hover {
+            color: #4CCEE8;
+        }
+
+        .wrapper .header .header-menu ul {
+            display: flex;
+        }
+
+        .wrapper .header .header-menu ul li a {
+            background: #fff;
+            color: #000;
+            display: block;
+            margin: 0 10px;
+            font-size: 18px;
+            width: 34px;
+            height: 34px;
+            line-height: 35px;
+            text-align: center;
+            border-radius: 50%;
+            transition: 0.3s;
+            transition-property: background, color;
+        }
+
+        .wrapper .header .header-menu ul li a:hover {
+            background: #4CCEE8;
+            color: #fff;
+        }
+
+        .wrapper .sidebar {
+            z-index: 1;
+            background: #2F323A;
+            position: fixed;
+            top: 50px;
+            width: 200px;
+            height: calc(100% - 0%);
+            transition: 0.3s;
+            transition-property: width;
+            overflow-y: auto;
+        }
+
+        .wrapper .sidebar .sidebar-menu {
+            overflow: hidden;
+        }
+
+        .wrapper .sidebar .sidebar-menu .profile img {
+            margin: 10px 0;
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+        }
+
+        .wrapper .sidebar .sidebar-menu .profile p {
+            color: #bbb;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .wrapper .sidebar .sidebar-menu .item {
+            width: 200px;
+            overflow: hidden;
+        }
+
+        .wrapper .sidebar .sidebar-menu .item .menu-btn {
+            display: block;
+            font-size: 16px;
+            color: #fff;
+            position: relative;
+            padding: 10px 10px;
+            transition: 0.3s;
+            transition-property: color;
+        }
+
+        .wrapper .sidebar .sidebar-menu .item .menu-btn span {
+
+            font-size: 14px;
+        }
+
+        #a,#b {
+            display: inline-block;
+            padding: 5px;
+            cursor: pointer;
+            background-color: lightgray;
+            border: 1px solid gray;
+            margin-right: 5px;
+        }
+
+        
+         #C {
+            display: inline-block;
+            padding: 5px;
+            cursor: pointer;
+            background-color: lightgray;
+            border: 1px solid gray;
+            margin-right: 5px;
+        }
+        
+       #C .logout {
+          
+            visibility: hidden;
+            width: 120px;
+            color: #ccc;
+            text-align: left;
+            border-radius: 6px;
+            padding: 5px 0;
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+        }
+
+        #C:hover .logout {
+            margin-top: 25px;
+            margin-left: -50px;
+            color: #4CCEE8;
+            visibility: visible;
+        }
+                
+        .wrapper .sidebar .sidebar-menu .item .menu-btn:hover {
+            color: #4CCEE8;
+        }
+
+        .wrapper .sidebar .sidebar-menu .item .menu-btn i {
+            margin-right: 20px;
+        }
+
+        .wrapper .sidebar .sidebar-menu .item .menu-btn .drop-down {
+            float: right;
+            font-size: 8px;
+            margin-top: 3px;
+        }
+
+        .wrapper .sidebar .sidebar-menu .item .sub-menu {
+            background: #3498DB;
+            overflow: hidden;
+            max-height: 0;
+            transition: 0.3s;
+            transition-property: background, max-height;
+        }
+
+        .wrapper .sidebar .sidebar-menu .item .sub-menu a {
+            display: block;
+            position: relative;
+            color: #fff;
+            white-space: nowrap;
+            font-size: 10px;
+            padding: 10px;
+            transition: 0.3s;
+            transition-property: background;
+        }
+
+        .wrapper .sidebar .sidebar-menu .item .sub-menu a:hover {
+            background: #55B1F0;
+        }
+
+        .wrapper .sidebar .sidebar-menu .item .sub-menu a:not(last-child) {
+            border-bottom: 1px solid #8FC5E9;
+        }
+
+        .wrapper .sidebar .sidebar-menu .item .sub-menu i {
+            padding-right: 20px;
+            font-size: 15px;
+        }
+
+        .wrapper .sidebar .sidebar-menu .item:target .sub-menu {
+            max-height: 500px;
+        }
+
+        .wrapper .main-container {
+            width: calc(100% - 200px);
+            margin-top: 52px;
+            margin-left: 200px;
+            padding: 0px;
+            background: url(banner8.jpg)no-repeat;
+            background-size: cover;
+            height: 100vh;
+            transition: 0.3s;
+        }
+
+        /*-- Side menu hide------*/
+        .wrapper.collapse .sidebar {
+            width: 0px;
+        }
+
+
+        .wrapper.collapse .sidebar .profile img,
+        .wrapper.collapse .sidebar .profile p,
+        .wrapper.collapse .sidebar a span {
+            display: none;
+        }
+
+        .wrapper.collapse .sidebar .sidebar-menu .item .menu-btn {
+            font-size: 20px;
+        }
+
+
+        .wrapper.collapse .sidebar .sidebar-menu .item .sub-menu i {
+            font-size: 18px;
+            padding-left: 3px;
+        }
+
+        /*-------*/
+        .wrapper.collapse .main-container {
+            width: calc(100% - 0px);
+            margin-left: 0px;
+        }
+
+        .wrapper .main-container .card {
+            background: #eee;
+            padding: 10px;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+    </style>
+    
+
+</head>
+<body>
+    <!--wrapper start-->
+    <div class="wrapper">
+        <!--header menu start-->
+        <div class="header">
+            <div class="header-menu">
+                <div class="title">TSIL | <span>TS2</span></div>
+                <div class="sidebar-btn">
+                    <i class="las la-bars"></i>
+                </div>
+                <ul>
+                    <i id='a' onclick="toggleFullscreen();" class="las la-expand"></i>
+                    <i id='b' onclick="toggleFullscreen();" class="las la-compress" style="display: none;"></i>
+                    <!-- <i id='c' onclick="logout()" class="las la-sign-out-alt"><span class="logout">Log out</span></i> -->
+                    <li class="item" id="C">
+                    <div class="logout-container" onclick="logout()">
+                        <i class="las la-sign-out-alt"></i>
+                        <span class="logout">Log out</span>
+                    </div>
+                </li>
+                </ul>
+            </div>
+        </div>
+        <!--header menu end-->
+        
+        <!--sidebar start-->
+        <div class="sidebar">
+            <div class="sidebar-menu">
+                <center class="profile">
+                    <img src="../images/TSIL_big.png" alt="">
+                    <p>Unit TS2</p>
+                </center>
+                
+                <li class="item">
+                    
+                    <a href="#" class="menu-btn" class="main-container" onclick="changeVideo('../page_home.html')"><i class="las la-chalkboard"></i><span>Dashboard</span></a>
+                </li>
+                
+                <li class="item" id="profile">
+                    <a href="#profile" class="menu-btn">
+                        <i class="las la-tshirt"></i><span>PMS <i class="fas fa-chevron-down drop-down"></i></span>
+                    </a>
+                    <div class="sub-menu">
+                        <a href="https://docs.google.com/spreadsheets/d/1mD07uH8kkJQsMzX69WucN25ZgGcEjT1leX3j_ZCadrE/edit#gid=1451016156" target="_blank">
+                        <i class="lab la-youtube"></i><span>PMS google sheet</span></a>
+                         <a href="#" onclick="changeVideo('page_ut_ts2_PMS.html')"><i class="las la-file-invoice-dollar"></i><span>Daily Cutting Report</span></a>
+                        <a href="#" onclick="changeVideo('page_ut_ts2_PMS.html')"><i class="las la-file-invoice-dollar"></i><span>Daily Production Report</span></a>
+                        <a href="#"><i class="las la-object-group"></i><span>Quality Report</span></a>
+                    </div>
+                </li>
+                
+                <li class="item" id="messages">
+                    <a href="#messages" class="menu-btn">
+                        <i class="las la-clipboard"></i><span>Reports <i class="fas fa-chevron-down drop-down"></i></span>
+                    </a>
+                    <div class="sub-menu">
+                        <a href="#" onclick="changeVideo('https://lookerstudio.google.com/embed/reporting/0e6fcd2c-aa27-4ebc-838d-f5e69cde335e/page/zYMYD')"><i class="las la-file-invoice-dollar"></i><span>Cutting Repot</span></a>
+                        <a href="#" onclick="changeVideo('https://lookerstudio.google.com/embed/reporting/0e6fcd2c-aa27-4ebc-838d-f5e69cde335e/page/zYMYD')"><i class="las la-file-invoice-dollar"></i><span>PMS Repot</span></a>
+                        <a href="#" onclick="changeVideo('https://www.youtube.com/embed/-un3ih1geoQ')"><i class="las la-file-invoice-dollar"></i><span>IE Repot</span></a>
+                        <a href="#" onclick="changeVideo('https://www.youtube.com/embed/VIDEO_ID_2')"><i class="las la-file-invoice"></i><span>Log Sheet</span></a>
+                        <a href="#" onclick="changeVideo('https://lookerstudio.google.com/embed/reporting/31ef6c31-822d-4bc8-a488-2327c136c5a1/page/p_c3dxl93o6c')"><i class="las la-file-alt"></i><span>Quality Report</span></a>
+                    </div>
+                </li>
+                
+                <li class="item" id="settings">
+                    <a href="#settings" class="menu-btn">
+                        <i class="las la-table"></i><span>BI Data <i class="fas fa-chevron-down drop-down"></i></span>
+                    </a>
+                    <div class="sub-menu">
+                        <a href="#" onclick="changeVideo('https://www.youtube.com/embed/-un3ih1geoQ')"><i class="las la-chart-bar"></i><span>Production CM Chart </span></a>
+                        <a href="#"><i class="las la-archive"></i><span>Production Summary</span></a>
+                        <a href="#"><i class="las la-edit"></i><span>Report </span></a>
+                    </div>
+                </li>
+
+                <li class="item">
+                    <a href="#" class="menu-btn" onclick="changeVideo('https://lookerstudio.google.com/embed/reporting/0e6fcd2c-aa27-4ebc-838d-f5e69cde335e/page/p_cvjd9osd8c')"><i class="lab la-youtube"></i><span>TV Display</span> </a> 
+                </li>
+                
+                <li class="item">
+                    <a href="https://lookerstudio.google.com/reporting/0e6fcd2c-aa27-4ebc-838d-f5e69cde335e/page/p_cvjd9osd8c" class="menu-btn" target="_blank">
+                        <i class="lab la-youtube"></i><span>TV Display1</span></a>
+                </li>
+                
+                <li class="item">
+                    <a href="#" class="menu-btn">
+                        <i class="las la-address-book"></i><span>Contact me</span>
+                    </a>
+                </li>
+
+                <li class="item">
+                    <a href="#" class="menu-btn">
+                        <i class="las la-info-circle"></i><span>About</span>
+                    </a>
+                </li>
+
+            </div>
+        </div>
+        <!--sidebar end-->
+        
+        
+            
+        
+        <!--main container start-->
+        <div class="main-container" id="videoContainer">
+            <!-- The iframe will be added dynamically here -->
+            
+            
+<iframe src="../page_home.html" width="100%" height="100%" frameborder="0"></iframe>
+            
+        </div>
+    </div>
+    <!--wrapper end-->
+    
+    
+ 
+    
+    
+    
+        //--Main div-----------------------------------------
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function changeVideo(videoURL) {
+            try {
+                var videoContainer = document.getElementById("videoContainer");
+                
+                // Create a new iframe element
+                var iframe = document.createElement("iframe");
+                iframe.width = "100%";
+                iframe.height = "100%";
+                iframe.src = videoURL;
+                iframe.frameBorder = "0";
+                iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+                iframe.allowFullscreen = true;
+
+                // Remove any existing content from the videoContainer
+                videoContainer.innerHTML = "";
+
+                // Append the new iframe to the videoContainer
+                videoContainer.appendChild(iframe);
+            } catch (error) {
+                console.error("An error occurred:", error);
+            }
+        }
+
+        $(".sidebar-btn").click(function () {
+            $(".wrapper").toggleClass("collapse");
+        });
+    
+        //----------------------------------------------------
+
+        //--Using JavaScript to open the page in fullscreen mode
+        function toggleFullscreen() {
+            var elem = document.documentElement;
+            var iconExpand = document.getElementById('a');
+            var iconCompress = document.getElementById('b');
+
+            if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.mozRequestFullScreen) { /* Firefox */
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) { /* Safari */
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { /* IE11 */
+                    elem.msRequestFullscreen();
+                }
+                iconExpand.style.display = 'none';
+                iconCompress.style.display = 'inline-block';
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { /* Firefox */
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { /* Safari */
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { /* IE11 */
+                    document.msExitFullscreen();
+                }
+
+                iconExpand.style.display = 'inline-block';
+                iconCompress.style.display = 'none';
+            }
+        }
+        //------------------------------------------------------
+        function logout() {
+            // Clear the user's session or do any other necessary logout tasks.
+            // For simplicity, we'll just redirect to the login page.
+            sessionStorage.removeItem('userLoggedIn');
+            window.location.href = "../index.html";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheets Embed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Add a font style */
+            margin: 0;
+            padding: 0;
+            overflow-y: hidden;
+        }
+
+        .container {
+            width: 100%;
+            height: auto; /* Change height to auto for content-based height */
+            position: relative;
+            background-color: #f2f2f2; /* Added a background color to the container */
+        }
+
+        .box {
+            width: 100%; /* Adjusted width to fill the container */
+            padding: 5px; /* Added padding for spacing */
+            position: absolute;
+            height: 70px;
+            background: #3498db; /* Changed background color */
+            color: #fff; /* Set text color to white */
+        }
+
+        #googleSheetsContainer {
+            padding: 0px; /* Added padding for spacing */
+        }
+
+        h3 {
+            font-size: 24px; /* Adjust the font size */
+            margin: 0; /* Remove default margin */
+        }
+
+        h4 {
+            font-size: 16px; /* Adjust the font size */
+            margin-top: 5px; /* Remove default margin */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h3>Texport Syndicate(I) Ltd.</h3>
+            <h4>TS2 | Hourly Production Report</h4>
+        </div>
+    </div>
+
+    <div id="googleSheetsContainer">
+        <iframe 
+            src="https://docs.google.com/spreadsheets/d/1mD07uH8kkJQsMzX69WucN25ZgGcEjT1leX3j_ZCadrE/edit#gid=1451016156;pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+            width="100%" height="900px">
+        </iframe>
+    </div>
+
+    <!-- New box added below 
+    <div class="box" style="bottom: 0;">
+        <h3>Another Box</h3>
+        <h4>Additional Content</h4>
+    </div>-->
+</body>
+</html>

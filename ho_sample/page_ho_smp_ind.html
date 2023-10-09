@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form to Google Sheets</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+<style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-image: url('./images/background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .container {
+            margin-top: 0%;
+            
+        }
+
+        form {
+            border: 1px solid grey;
+            background: rgba(255,255,255,0.85);
+            padding: 10px;
+            border-radius: 10px;
+            
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h4 {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .form-description {
+            text-align: center;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+                display: inline-block;
+            margin-bottom: 0rem
+        }
+
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+    
+/* Hide the date picker icon */
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        display: none;
+    }
+    
+    /* Hide the date picker icon for Firefox */
+    input[type="date"]::-webkit-inner-spin-button {
+        display: none;
+    }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .input-group-text {
+            display: flex;
+            align-items: center;
+            padding: 0.375rem 0.75rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            line-height: 1.5;
+            color: #212529;
+            text-align: center;
+            white-space: nowrap;
+            background-color: #e9ecef;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            padding: 0.375rem 0.75rem;
+            font-size: 0.8rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: 0.375rem;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        }
+
+        .input-group-text {
+            width: 125px;
+         } 
+
+        input[type="date"], select, textarea {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive styles for smaller screens */
+        @media (max-width: 768px) {
+            form {
+                padding: 10px;
+            }
+        }
+
+</style>
+    
+</head>
+<body>
+    
+    // old : https://script.google.com/macros/s/AKfycbwRGBPSMwKePssIrkHsa4Xd2HwIpfnu21QmBhpRbOFHABumkL2GTQATpU8ft1eY6vJe/exec
+    //https://script.google.com/macros/s/AKfycbzcntIg8hrlJ66Nf2ayes8QHBWBOy4KwDRC8pChkhqzJL-4EfORlJ9aySZsVA9u_fWW/exec
+    //https://script.google.com/macros/s/AKfycbwCMr_YKeyBEcRV4kA0PB5iXopM8UsvFnzq7EY81_KAvcy3D3uldYvdVRacvgwH3u2J/exec
+    
+ <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form method="post" action="https://script.google.com/macros/s/AKfycbyF64abvLRAbDWUBYYUWDYMd2zAbNLpjjHNaaehtiuOpwfl6On2ILlwzLbAv6n87vGX/exec" name="contactform" id="contactform">
+                    <h4>Sample Request Form</h4>
+                    <p class="form-description">Fill in the information details</p> <!-- Move inline CSS to an external CSS file -->
+                    
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Inv. Date</span>
+                        <input type="date" class="form-control" placeholder="Ind. Date" name="Ind_Date" id="Invdate" required readonly>
+                    </div>
+                    
+                    
+                    <div class="input-group mb-3">
+                         <span class="input-group-text" >Merchant</span>
+                        <select class="form-control" id="merchantSelect" name="Merchant_Name" required>
+                            <option value="" disabled selected>Select Merchant Name</option>
+                            <option value="Manasa M R">Manasa M R</option>
+                            <option value="Kumar V">Kumar V</option>
+                            <option value="Devaraj">Devaraj</option>
+                            <option value="Manjunath">Manjunath</option>
+                            <option value="Sukannya">Sukannya</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" >Buyer</span>
+                        <select class="form-control" id="buyerSelect" name="Buyer_Name" required>
+                            <option value="" disabled selected>Select Buyer</option>
+                            <option value="Ralph Lauren">Ralph Lauren</option>
+                            <option value="Ricky Ralph Lauren">Ricky Ralph Lauren</option>
+                            <option value="Primark">Primark</option>
+                            <option value="American Eagle">American Eagle</option>
+                            <option value="Lucky Brand">Lucky Brand</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" >Style №.</span>
+                        <input type="text" class="form-control" placeholder="Enter Style No." name="Style_No." id="Styleno" required>
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" >Season</span>
+                        <input type="text" class="form-control" placeholder="Enter Board" name="Board_Name" id="Boardname" required>
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" >Style Description</span>
+                        <input type="text" class="form-control" placeholder="Enter Style Description" name="Style_Description" id="Styledescription" required>
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Type of Sample</span>
+                        <select class="form-control" id="Typeofsample" name="Type_of_Sample"required>
+                            <option value="" disabled selected>Select type of sample</option>
+                            <option value="Development Sample">Development Sample</option>
+                            <option value="Fit1 Sample">Fit1 Sample</option>
+                            <option value="Fit2 Sample">Fit2 Sample</option>
+                            <option value="SRS Sample">SRS Sample</option>
+                            <option value="PP Sample">PP Sample</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" >Size</span>
+                        <input type="text" class="form-control" placeholder="Enter Size" name="Size" id="size" required>
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" >No. of pcs</span>
+                        <input type="text" class="form-control" placeholder="Enter pieces " name="Pieces" id="pieces" required>
+                    </div>
+                                        
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Style Informaction</span>
+                        <textarea class="form-control" placeholder="Optional" name="Style_Info" id="styleinfo" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        //-----------------------------------
+        // Get the current date in the format "YYYY-MM-DD"
+    var currentDate = new Date().toISOString().slice(0, 10);
+    
+    // Set the current date as the value of the input field
+    document.getElementById('Invdate').value = currentDate;
+        //------------------------------------
+        
+        const form = document.getElementById('contactform');
+        form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                });
+                
+                if (response.ok) {
+                    alert('Thank you! Your request has been submitted successfully.');
+                    form.reset();
+                } else {
+                    alert('Oops! Something went wrong. Please try again later.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Oops! Something went wrong. Please try again later.');
+            }
+        });
+           
+    </script>
+</body>
+</html>
