@@ -71,6 +71,11 @@
             { username: "user3b", password: "pass3b" },
         ];
 
+        var users4 = [
+            { username: "hr", password: "hr123" },
+            { username: "user3b", password: "pass3b" },
+        ];
+
         function navigate() {
             var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
@@ -92,7 +97,9 @@
                 window.location.href = "ho_sample/page_ho_smp.html"; // Redirect to page 2
             } else if (checkUserArray(users3)) {
                 window.location.href = "page3.html"; // Redirect to page 3
-            } else {
+            }  else if (checkUserArray(users4)) {
+                window.location.href = "ho_hr/page_ho_hr.html"; // Redirect to page 3
+            }  else {
                 alert("Invalid username or password.");
             }
         }
