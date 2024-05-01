@@ -22,11 +22,6 @@
             </a>
             <ul class="links">
                 <span class="close-btn material-symbols-rounded">close</span>
-                <!--<li><a href="#">Home</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contact us</a></li>-->
             </ul>
             <button class="login-btn">LOG IN</button>
         </nav>
@@ -43,7 +38,7 @@
             <div class="form-content">
                 <h2>LOGIN</h2>
                 
-                <form action="#" id="login-form">
+                <form id="login-form">
                     <div class="input-field">
                         <input type="text" id="username" name="username" required>
                         <label for="username">User ID</label>
@@ -54,7 +49,7 @@
                         <label for="password">Password</label>
                     </div>
                     
-                     <button class="button" type="button" onclick="navigate()">Go</button>
+                    <button class="button" type="button" onclick="navigate()">Go</button>
                 </form>
                 
             </div>
@@ -63,18 +58,18 @@
     
 
     <script>
-            var users1 = [
-                { username: "ts2user", password: "passts2" },
-                { username: "userts2", password: "pass1b" },
-            ];
-             var users2 = [
-                { username: "smpho", password: "passho" },
-                { username: "user2b", password: "pass2b" },
-            ];
-            var users3 = [
-                { username: "user3a", password: "pass3a" },
-                { username: "user3b", password: "pass3b" },
-            ];
+        var users1 = [
+            { username: "ts2user", password: "passts2" },
+            { username: "userts2", password: "pass1b" },
+        ];
+        var users2 = [
+            { username: "smpho", password: "passho" },
+            { username: "user2b", password: "pass2b" },
+        ];
+        var users3 = [
+            { username: "user3a", password: "pass3a" },
+            { username: "user3b", password: "pass3b" },
+        ];
 
         function navigate() {
             var username = document.getElementById("username").value;
@@ -102,14 +97,7 @@
             }
         }
 
-        // Detect page refresh event and redirect to index page
-        window.onload = function () {
-            if (performance.navigation.type === 1) {
-                window.location.href = "index.html"; // Replace 'index.html' with your actual index page URL
-            }
-        };
-
-        // Prevent navigation back to login page
+        // Prevent going back using browser's back button
         history.pushState(null, null, location.href);
         window.onpopstate = function () {
             history.go(1);
