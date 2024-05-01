@@ -470,6 +470,12 @@
             sessionStorage.removeItem('userLoggedIn');
             window.location.href = "../index.html";
         }
+
+         // Prevent going back using browser's back button
+        history.pushState(null, null, location.href);
+        window.onpopstate = function () {
+            history.go(1);
+        };
     </script>
 
 </body>
