@@ -37,7 +37,7 @@
         <div class="form-box login">
             <div class="form-details">
                 <h2>Welcome</h2>
-                <p>Please log in using offical information to stay connected with us.</p>
+                <p>Please log in using official information to stay connected with us.</p>
             </div>
             
             <div class="form-content">
@@ -101,6 +101,19 @@
                 alert("Invalid username or password.");
             }
         }
+
+        // Detect page refresh event and redirect to index page
+        window.onload = function () {
+            if (performance.navigation.type === 1) {
+                window.location.href = "index.html"; // Replace 'index.html' with your actual index page URL
+            }
+        };
+
+        // Prevent navigation back to login page
+        history.pushState(null, null, location.href);
+        window.onpopstate = function () {
+            history.go(1);
+        };
     </script>
     
 </body>
