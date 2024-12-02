@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheet Viewer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 10px 0;
+            font-size: 1.0rem;
+            font-weight: bold;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        iframe {
+            border: none;
+            width: 100vw;
+            height: calc(100vh - 50px); /* Adjust height to exclude header */
+        }
+    </style>
+    <script>
+        // Disable right-click
+        document.addEventListener("contextmenu", (e) => {
+            e.preventDefault();
+            alert("Right-click is disabled.");
+        });
+
+        // Disable F12 (Developer Tools)
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
+                e.preventDefault();
+                alert("Opening developer tools is disabled.");
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>Machines required Derails as per OB</header>
+    <iframe src="https://docs.google.com/spreadsheets/d/1_LQ38dhSsM40loxaM_ZxjhUZtLnwlXn8J5Orq4qA0VI/edit?usp=sharing" allowfullscreen></iframe>
+</body>
+</html>
+
+
