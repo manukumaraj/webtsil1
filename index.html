@@ -75,7 +75,9 @@
             { username: "hr", password: "hr123" },
             { username: "ho", password: "ho123" },
         ];
-
+        var users5 = [
+            { username: "obmc", password: "obmc123" },
+        ];
         function navigate() {
             var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
@@ -99,6 +101,8 @@
                 window.location.href = "ho_kpi_data_input/indexkpi.html"; // Redirect to page 3
             }  else if (checkUserArray(users4)) {
                 window.location.href = "ho_hr/page_ho_hr.html"; // Redirect to page 3
+            }  else if (checkUserArray(users5)) {
+                window.location.href = "OBmc/OBmc.html"; // Redirect to page 3
             }  else {
                 alert("Invalid username or password.");
             }
