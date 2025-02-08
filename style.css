@@ -52,7 +52,7 @@ header {
 }
 
 .navbar .logo h2 {
-    color: #fff;
+    color: #244219;
     font-weight: 600;
     font-size: 1.7rem;
 }
@@ -89,7 +89,7 @@ header {
     border: none;
     outline: none;
     background: #fff;
-    color: #275360;
+    color: #2c3e50;
     font-size: 1rem;
     font-weight: 600;
     padding: 10px 18px;
@@ -172,6 +172,8 @@ header {
     background-size: cover;
 }
 
+
+
 .signup .form-details {
     padding: 0 20px;
     background: url("images/signup-img.jpg");
@@ -187,6 +189,7 @@ header {
 .form-box h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: #fff;
 }
 
 form .input-field {
@@ -204,7 +207,7 @@ form .input-field {
     outline: none;
     font-size: 0.95rem;
     padding: 0 15px;
-    border: 1px solid #717171;
+    border: 1px solid #2c3e50;
     border-radius: 3px;
 }
 
@@ -304,7 +307,7 @@ form button {
     border-radius: 3px;
     cursor: pointer;
     margin: 25px 0;
-    background: #00bcd4;
+    background: #34495e;
     transition: 0.2s ease;
 }
 
@@ -347,6 +350,7 @@ form button:hover {
 
     .navbar .logo h2 {
         font-size: 1.4rem;
+        font-family: "Roboto", sans-serif;
     }
 
     .navbar .links {
@@ -382,7 +386,7 @@ form button:hover {
         font-size: 0.9rem;
         padding: 7px 10px;
     }
-}
+
 
 @media (max-width: 760px) {
     .form-popup {
