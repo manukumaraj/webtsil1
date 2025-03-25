@@ -156,8 +156,8 @@
             font-size: 12px;
         }
 
-        #a,
-        #b {
+        #expand,
+        #compress {
             display: inline-block;
             padding: 5px;
             cursor: pointer;
@@ -166,7 +166,7 @@
             margin-right: 5px;
         }
 
-        #C {
+        #logout-button {
             display: inline-block;
             padding: 5px;
             cursor: pointer;
@@ -175,7 +175,7 @@
             margin-right: 5px;
         }
 
-        #C .logout {
+        #logout-button .logout {
             visibility: hidden;
             width: 120px;
             color: #ccc;
@@ -187,7 +187,7 @@
             z-index: 1;
         }
 
-        #C:hover .logout {
+        #logout-button:hover .logout {
             margin-top: 25px;
             margin-left: -50px;
             color: #4CCEE8;
@@ -288,6 +288,26 @@
             margin-bottom: 5px;
             font-size: 14px;
         }
+
+        /* width */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
     </style>
 </head>
 
@@ -302,10 +322,10 @@
                     <i class="las la-bars"></i>
                 </div>
                 <ul>
-                    <i id='a' onclick="toggleFullscreen();" class="las la-expand"></i>
-                    <i id='b' onclick="toggleFullscreen();" class="las la-compress" style="display: none;"></i>
+                    <i id='expand' onclick="toggleFullscreen();" class="las la-expand"></i>
+                    <i id='compress' onclick="toggleFullscreen();" class="las la-compress" style="display: none;"></i>
                     <!-- <i id='c' onclick="logout()" class="las la-sign-out-alt"><span class="logout">Log out</span></i> -->
-                    <li class="item" id="C">
+                    <li class="item" id="logout-button">
                         <div class="logout-container" onclick="logout()">
                             <i class="las la-sign-out-alt"></i>
                             <span class="logout">Log out</span>
@@ -340,6 +360,14 @@
                     <a href="#" class="menu-btn" onclick="changeVideo('https://script.google.com/macros/s/AKfycbyOzGGqkAHfCAGrzauAVW6KP2mLRLV2sasBpc8dlx-UST6FM93gDmC8tAuboLw0E38qEQ/exec')">
                         <i class="las la-file-invoice"></i><span>CFT Files</span> </a>
 
+                    <a href="#" class="menu-btn" onclick="window.open('https://docs.google.com/spreadsheets/d/1cDxz9fqGzRszWDXOggdChaOMImVwCB27atVYaDDYvcQ/edit?usp=sharing', '_blank')">
+                        <i class="las la-cogs"></i><span>Machine Summary</span>
+                    </a>
+
+                    <a href="#" class="menu-btn" onclick="window.open('https://docs.google.com/spreadsheets/d/1rekp5LyRhUQLjxLTtqhLA57SeUDDvejtkI4EKRVYcGs/edit?usp=sharing', '_blank')">
+                        <i class="las la-chevron-circle-down"></i><span>Needle Summary</span>
+                    </a>
+
                 </li>
 
 
@@ -367,7 +395,7 @@
         </div>
     </div>
     <!--wrapper end-->
-    
+
     <script>
         function changeVideo(videoURL) {
             if (!videoURL) return console.error("Invalid video URL provided.");
