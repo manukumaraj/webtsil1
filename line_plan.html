@@ -1,80 +1,450 @@
+<!-- https://icons8.com/line-awesome-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Sheet Viewer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/line-awesome/dist/line-awesome/css/line-awesome.min.css">
+    <title>TSPL | PPD</title>
+    <link rel="icon" href="img/tsilfaviconn.png" type="image/png" sizes="32x32">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
     <script src="rightclick.js" defer></script>
     <script src="login.js" defer></script>
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
+            list-style: none;
+            text-decoration: none;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
         }
-        header {
+
+        body {
+            background: #fff;
+            overflow-y: hidden;
+        }
+
+        .wrapper .header {
+            z-index: 1;
+            background: #2c3e50;
+            position: fixed;
+            width: calc(100% - 0%);
+            height: 50px;
+            display: flex;
+            top: 0;
+            /*         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);*/
+        }
+
+        .wrapper .header .header-menu {
+            width: calc(100% - 0%);
+            height: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #f4f4f4;
-            padding: 2px 20px;
-            font-size: 0.75rem;
-            font-weight: bold;
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            flex-shrink: 0;
+            padding: 0 10px;
         }
-        .header-title {
-            flex-grow: 1;
-            text-align: center;
+
+        /*--Side Menu header---*/
+        .wrapper .header .header-menu .title {
+            color: #fff;
+            font-size: 18px;
+            /*text-transform: uppercase;---*/
+            font-weight: 900;
         }
-        .fullscreen-toggle {
+
+        .wrapper .header .header-menu .title span {
+            color: #4CCEE8;
+            font-size: 16px;
+        }
+
+        /*-------------------*/
+        .wrapper .header .header-menu .sidebar-btn {
+            color: #fff;
+            position: absolute;
+            margin-left: 190px;
+            font-size: 22px;
+            font-weight: 900;
             cursor: pointer;
-            font-size: 1.2rem;
+            transition: 0.3s;
+            transition-property: color;
         }
-/*
-        iframe {
-            border: none;
-            width: 100vw;
-            height: calc(100vh - 50px);
+
+        .wrapper .header .header-menu .sidebar-btn:hover {
+            color: #4CCEE8;
         }
-*/
-        
-        iframe {
-    flex: 1; /* Takes all remaining space */
-    border: none;
-    width: 100%;
-    min-height: 0; /* Important for flex item sizing */
-}
+
+        .wrapper .header .header-menu ul {
+            display: flex;
+        }
+
+        .wrapper .header .header-menu ul li a {
+            background: #fff;
+            color: #000;
+            display: block;
+            margin: 0 10px;
+            font-size: 18px;
+            width: 34px;
+            height: 34px;
+            line-height: 35px;
+            text-align: center;
+            border-radius: 50%;
+            transition: 0.3s;
+            transition-property: background, color;
+        }
+
+        .wrapper .header .header-menu ul li a:hover {
+            background: #4CCEE8;
+            color: #fff;
+        }
+
+        .wrapper .sidebar {
+            z-index: 1;
+            background: #34495e;
+            position: fixed;
+            top: 50px;
+            width: 200px;
+            height: calc(100% - 0%);
+            transition: 0.3s;
+            transition-property: width;
+            overflow-y: auto;
+        }
+
+        .wrapper .sidebar .sidebar-menu {
+            overflow: hidden;
+        }
+
+        .wrapper .sidebar .sidebar-menu .profile img {
+            margin-top: 5px;
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+        }
+
+        .wrapper .sidebar .sidebar-menu .profile p {
+            color: #bbb;
+            font-weight: 700;
+            margin-top: 0px;
+            margin-bottom: 25px;
+        }
+
+        .wrapper .sidebar .sidebar-menu .profile a {
+            color: #bbb;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .wrapper .sidebar .sidebar-menu .item {
+            width: 200px;
+            overflow: hidden;
+        }
+
+        .wrapper .sidebar .sidebar-menu .item .menu-btn {
+            display: block;
+            font-size: 16px;
+            color: #fff;
+            position: relative;
+            padding: 10px 10px;
+            transition: 0.3s;
+            transition-property: color;
+            border-bottom: 0.1px solid #656b71;
+        }
+
+        .wrapper .sidebar .sidebar-menu .item .menu-btn span {
+            font-size: 12px;
+        }
+
+        #expand,
+        #compress {
+            display: inline-block;
+            padding: 5px;
+            cursor: pointer;
+            background-color: lightgray;
+            border: 1px solid gray;
+            margin-right: 5px;
+        }
+
+        #logout-button {
+            display: inline-block;
+            padding: 5px;
+            cursor: pointer;
+            background-color: lightgray;
+            border: 1px solid gray;
+            margin-right: 5px;
+        }
+
+        #logout-button .logout {
+            visibility: hidden;
+            width: 120px;
+            color: #ccc;
+            text-align: left;
+            border-radius: 6px;
+            padding: 5px 0;
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+        }
+
+        #logout-button:hover .logout {
+            margin-top: 25px;
+            margin-left: -50px;
+            color: #4CCEE8;
+            visibility: visible;
+        }
+
+        .wrapper .sidebar .sidebar-menu .item .menu-btn:hover {
+            background: #2c3e50;
+            color: #4CCEE8;
+        }
+
+        .wrapper .sidebar .sidebar-menu .item .menu-btn i {
+            margin-right: 8px;
+        }
+
+        .wrapper .sidebar .sidebar-menu .item .menu-btn .drop-down {
+            float: right;
+            font-size: 8px;
+            margin-top: 3px;
+        }
+
+        .wrapper .sidebar .sidebar-menu .item .sub-menu {
+            background: #3498DB;
+            overflow: hidden;
+            max-height: 0;
+            transition: 0.3s;
+            transition-property: background, max-height;
+        }
+
+        .wrapper .sidebar .sidebar-menu .item .sub-menu a {
+            display: block;
+            position: relative;
+            color: #fff;
+            white-space: nowrap;
+            font-size: 10px;
+            padding: 10px;
+            transition: 0.3s;
+            transition-property: background;
+        }
+
+        .wrapper .sidebar .sidebar-menu .item .sub-menu a:hover {
+            background: #55B1F0;
+        }
+
+        .wrapper .sidebar .sidebar-menu .item .sub-menu a:not(last-child) {
+            border-bottom: 1px solid #8FC5E9;
+        }
+
+        .wrapper .sidebar .sidebar-menu .item .sub-menu i {
+            padding-right: 20px;
+            font-size: 15px;
+        }
+
+        .wrapper .sidebar .sidebar-menu .item:target .sub-menu {
+            max-height: 500px;
+        }
+
+        .wrapper .main-container {
+            width: calc(100% - 200px);
+            margin-top: 52px;
+            margin-left: 200px;
+            padding: 0px;
+            background: url(banner8.jpg)no-repeat;
+            background-size: cover;
+            height: 100vh;
+            transition: 0.3s;
+        }
+
+        /*-- Side menu hide------*/
+        .wrapper.collapse .sidebar {
+            width: 0px;
+        }
+
+        .wrapper.collapse .sidebar .profile img,
+        .wrapper.collapse .sidebar .profile p,
+        .wrapper.collapse .sidebar a span {
+            display: none;
+        }
+
+        .wrapper.collapse .sidebar .sidebar-menu .item .menu-btn {
+            font-size: 20px;
+        }
+
+        .wrapper.collapse .sidebar .sidebar-menu .item .sub-menu i {
+            font-size: 18px;
+            padding-left: 3px;
+        }
+
+        /*-------*/
+        .wrapper.collapse .main-container {
+            width: calc(100% - 0px);
+            margin-left: 0px;
+        }
+
+        .wrapper .main-container .card {
+            background: #eee;
+            padding: 10px;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        /* width */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
     </style>
 </head>
+
 <body>
-    <header>
-         <div class="header-title">Production Planning Dept | Line Plan</div>
-        
-        <i class="las la-expand fullscreen-toggle" id="fullscreenIcon" onclick="toggleFullscreen()"></i>
-    </header>
-    <iframe src="https://docs.google.com/spreadsheets/d/1nW7CoUhPhpuHjWVSjfEmcrKJF_3wcoQ1NUCzerwi_F0/edit?usp=sharing" allowfullscreen></iframe>
+    <!--wrapper start-->
+    <div class="wrapper">
+        <!--header menu start-->
+        <div class="header">
+            <div class="header-menu">
+                <div class="title">TSPL | <span>PPD</span></div>
+                <div class="sidebar-btn">
+                    <i class="las la-bars"></i>
+                </div>
+                <ul>
+                    <i id='expand' onclick="toggleFullscreen();" class="las la-expand"></i>
+                    <i id='compress' onclick="toggleFullscreen();" class="las la-compress" style="display: none;"></i>
+                    <!-- <i id='c' onclick="logout()" class="las la-sign-out-alt"><span class="logout">Log out</span></i> -->
+                    <li class="item" id="logout-button">
+                        <div class="logout-container" onclick="logout()">
+                            <i class="las la-sign-out-alt"></i>
+                            <span class="logout">Log out</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--header menu end-->
+        <!--sidebar start-->
+        <div class="sidebar">
+            <div class="sidebar-menu">
+                <center class="profile">
+                    <img src="img/TSIL_big.png" alt="">
+                    <!-- <p>Unit TS2</p> -->
+                    <p> <a href="#" class="menu-btn main-container" onclick="changeVideo('home.html')">Link Production Plan </a></p>
+                </center>
+
+                <li class="item">
+                    <a href="#" class="menu-btn" onclick="changeVideo('https://lookerstudio.google.com/embed/reporting/91f7d058-22fa-4275-a2a1-d72265dd1aeb/page/p_r2f75v4t7c')">
+                        <i class="las la-chalkboard"></i><span>Plan Dashboard</span> </a>
+                </li>
+
+
+                <li class="item">
+                    
+                    <a href="#" class="menu-btn" onclick="window.open('https://docs.google.com/spreadsheets/d/1nW7CoUhPhpuHjWVSjfEmcrKJF_3wcoQ1NUCzerwi_F0/edit?usp=sharing', '_blank')">
+                        <i class="las la-th-list"></i><span>Line Plans sheet</span>
+                    </a>
+
+                  
+                </li>
+
+                <li class="item" id="menu1">
+                    <a href="#menu1" class="menu-btn">
+                        <i class="lab la-vuejs"></i>
+                        <span>Unit Plan<i class="fas fa-chevron-down drop-down"></i></span>
+                    </a>
+                    <div class="sub-menu">
+                        <a href="#" onclick="changeVideo('https://lookerstudio.google.com/embed/reporting/dd00b4db-ad47-473f-80e7-f6db8f34d1dd/page/45GEF')">
+                            <i class="las la-file-invoice"></i><span>FIPL | Plan summary</span></a>
+                        <!-- <a href="#" onclick="openInNewTab('https://lookerstudio.google.com/embed/reporting/dd00b4db-ad47-473f-80e7-f6db8f34d1dd/page/45GEF')">
+                     <i class="lab la-viacoin"></i><span>FIPL | Needle Plan</span>
+                     </a> -->
+                    </div>
+                </li>
+
+
+                <li class="item">
+                    <a href="#" class="menu-btn" onclick="changeVideo('https://lookerstudio.google.com/embed/reporting/72b4579b-c9df-4c3e-a280-34d564205d14/page/p_cvjd9osd8c')">
+                        <i class="las la-user-circle"></i><span>Contact Me</span> </a>
+                    <!-- <a href="#" class="menu-btn" onclick="changeVideo('https://lookerstudio.google.com/embed/reporting/72b4579b-c9df-4c3e-a280-34d564205d14/page/p_cvjd9osd8c')">
+                  <i class="las la-address-book"></i><span>Contact Me1</span> </a> -->
+                </li>
+
+
+                <li class="item">
+                    <a href="#" class="menu-btn">
+                        <i class="las la-info-circle"></i><span>About</span>
+                    </a>
+                </li>
+
+
+            </div>
+        </div>
+        <!--sidebar end-->
+        <!--main container start-->
+        <div class="main-container" id="videoContainer">
+            <iframe src="home.html" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+    </div>
+    <!--wrapper end-->
 
     <script>
-    function toggleFullscreen() {
-        const elem = document.documentElement;
-        const icon = document.getElementById('fullscreenIcon');
-        
-        if (!document.fullscreenElement) {
-            elem.requestFullscreen?.().catch(e => console.log(e));
-            icon.classList.replace('la-expand', 'la-compress');
-        } else {
-            document.exitFullscreen?.();
-            icon.classList.replace('la-compress', 'la-expand');
+        function changeVideo(videoURL) {
+            if (!videoURL) return console.error("Invalid video URL provided.");
+
+            const videoContainer = document.getElementById("videoContainer");
+            if (!videoContainer) return console.error("Video container element not found.");
+
+            videoContainer.innerHTML = ""; // Clear previous content
+
+            // Create and configure the iframe
+            const iframe = document.createElement("iframe");
+            Object.assign(iframe, {
+                width: "100%",
+                height: "90%",
+                src: videoURL,
+                frameBorder: "0",
+                allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+                allowFullscreen: true,
+            });
+
+            videoContainer.appendChild(iframe); // Add the iframe to the container
         }
-    }
-</script>
+
+
+        // Sidebar toggle functionality  
+        $(".sidebar-btn").click(function() {
+            $(".wrapper").toggleClass("collapse");
+        });
+
+        //--Using JavaScript to open the page in fullscreen mode
+        function toggleFullscreen() {
+            const elem = document.documentElement;
+            const iconExpand = document.getElementById('expand');
+            const iconCompress = document.getElementById('compress');
+
+            if (!document.fullscreenElement) {
+                elem.requestFullscreen?.();
+                iconExpand.hidden = true;
+                iconCompress.hidden = false;
+            } else {
+                document.exitFullscreen?.();
+                iconExpand.hidden = false;
+                iconCompress.hidden = true;
+            }
+        }
+    </script>
 </body>
+
 </html>
