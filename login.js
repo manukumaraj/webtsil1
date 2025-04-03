@@ -6,7 +6,8 @@ const userGroups = {
     users5: { redirect: "kpidata.html", target: "_blank", users: [{ username: "kpi", password: "kpi123" }] },
     users6: { redirect: "line_plan.html", users: [{ username: "ppd", password: "ppd123" }] },
     users7: { redirect: "obmc.html", users: [{ username: "ombc", password: "obcm123" }] },
-    users8: { redirect: "unit_fipl.html", users: [{ username: "fipl", password: "fipl123" }] }
+    users8: { redirect: "unit_fipl.html", users: [{ username: "fipl", password: "fipl123" }] },
+    users9: { redirect: "ndl_form.html", users: [{ username: "ndl", password: "ndl123" }] }
 };
 
 // Login function
