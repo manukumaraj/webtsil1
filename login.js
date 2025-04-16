@@ -1,13 +1,14 @@
 const userGroups = {
-    users1: { redirect: "main.html", users: [{ username: "ho", password: "ho123" }, { username: "hr", password: "hr123" }] },
-    users2: { redirect: "gsd_dept.html", users: [{ username: "gsd", password: "gsd123" }] },
-    users3: { redirect: "smp_dept.html", users: [{ username: "smp", password: "smp123" }] },
-    users4: { redirect: "cft_form.html", users: [{ username: "cft", password: "cft123" }] },
-    users5: { redirect: "kpidata.html", target: "_blank", users: [{ username: "kpi", password: "kpi123" }] },
-    users6: { redirect: "line_plan.html", users: [{ username: "ppd", password: "ppd123" }] },
-    users7: { redirect: "obmc.html", users: [{ username: "ombc", password: "obcm123" }] },
-    users8: { redirect: "unit_fipl.html", users: [{ username: "fipl", password: "fipl123" }] },
-    users9: { redirect: "ndl_form.html", users: [{ username: "ndl", password: "ndl123" }] }
+    users1: { redirect: "main_ho.html", users: [{ username: "ho", password: "tspl248" }, { username: "hr", password: "hr123" }] },
+    users2: { redirect: "main.html", users: [{ username: "ho", password: "ho123" }, { username: "hr", password: "hr123" }] },
+    users3: { redirect: "gsd_dept.html", users: [{ username: "gsd", password: "gsd123" }] },
+    users4: { redirect: "smp_dept.html", users: [{ username: "smp", password: "smp123" }] },
+    users5: { redirect: "cft_form.html", users: [{ username: "cft", password: "cft123" }] },
+    users6: { redirect: "kpidata.html", target: "_blank", users: [{ username: "kpi", password: "kpi123" }] },
+    users7: { redirect: "line_plan.html", users: [{ username: "ppd", password: "ppd123" }] },
+    users8: { redirect: "obmc.html", users: [{ username: "ombc", password: "obcm123" }] },
+    users9: { redirect: "unit_fipl.html", users: [{ username: "fipl", password: "fipl123" }] },
+    users10: { redirect: "ndl_form.html", users: [{ username: "ndl", password: "ndl123" }] }
 };
 
 // Login function
