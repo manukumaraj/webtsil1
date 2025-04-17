@@ -313,119 +313,132 @@
 </head>
 
 <body>
-    <!--wrapper start-->
-    <div class="wrapper">
-        <!--header menu start-->
-        <div class="header">
-            <div class="header-menu">
-                <div class="title">TSPL | <span>Unit FIPL</span></div>
-                <div class="sidebar-btn">
-                    <i class="las la-bars"></i>
-                </div>
-                <ul>
-                    <i id='expand' onclick="toggleFullscreen();" class="las la-expand"></i>
-                    <i id='compress' onclick="toggleFullscreen();" class="las la-compress" style="display: none;"></i>
-                    <!-- <i id='c' onclick="logout()" class="las la-sign-out-alt"><span class="logout">Log out</span></i> -->
-                    <li class="item" id="logout-button">
-                        <div class="logout-container" onclick="logout()">
-                            <i class="las la-sign-out-alt"></i>
-                            <span class="logout">Log out</span>
+<!-- Wrapper Start -->
+<div class="wrapper">
 
-                        </div>
-                    </li>
-                </ul>
+    <!-- Header Menu Start -->
+    <div class="header">
+        <div class="header-menu">
+            <div class="title">TSPL | <span>FIPL</span></div>
+            <div class="sidebar-btn">
+                <i class="las la-bars"></i>
             </div>
-        </div>
-        <!--header menu end-->
-        <!--sidebar start-->
-        <div class="sidebar">
-            <div class="sidebar-menu">
-                <center class="profile">
-                    <img src="img/TSIL_big.png" alt="">
-                    <!-- <p>Unit TS2</p> -->
-                    <p> <a href="#" class="menu-btn main-container" onclick="changeVideo('home.html')">Link Unit Management</a></p>
-                </center>
-
-                <li class="item">
-                    <a href="#" class="menu-btn" onclick="changeVideo('https://lookerstudio.google.com/embed/reporting/9e1780c1-e6ec-4152-8a39-f06907767a79/page/bxz5D')">
-                        <i class="las la-users-cog"></i><span>MMR Dashboard</span></a>
+            <ul>
+                <i id="expand" onclick="toggleFullscreen();" class="las la-expand"></i>
+                <i id="compress" onclick="toggleFullscreen();" class="las la-compress" style="display: none;"></i>
+                <li class="item" id="logout-button">
+                    <div class="logout-container" onclick="logout()">
+                        <i class="las la-sign-out-alt"></i>
+                        <span class="logout">Log out</span>
+                    </div>
                 </li>
-
-
-                 <li class="item">
-                    <a href="#" class="menu-btn" onclick="changeVideo('https://lookerstudio.google.com/embed/reporting/7ff9d60c-dcee-4aa4-85c8-92c69836c519/page/bxz5D')">
-                        <i class="las la-clipboard"></i><span>FIPL | KPI Dashboard</span></a>
-                </li>
-                
-
-                 <li class="item">
-                    <a href="#" class="menu-btn" onclick="changeVideo('https://lookerstudio.google.com/embed/reporting/ebdfc9f3-e54e-478f-ad8f-ceb36780cba7/page/vLt8D')">
-                        <i class="las la-tshirt"></i><span>FIPL | Production</span></a>
-                </li>
-                
-                 <li class="item">
-                    <a href="#" class="menu-btn" onclick="changeVideo('https://lookerstudio.google.com/embed/reporting/f363df8a-46f2-41dc-92d9-7c693d711c69/page/XOGcE')">
-                        <i class="las la-file-invoice"></i><span>FIPL | FSA Dashboard</span></a>
-                </li>
-                
-                <li class="item">
-                    <a href="#" class="menu-btn" onclick="changeVideo('https://lookerstudio.google.com/embed/reporting/dd00b4db-ad47-473f-80e7-f6db8f34d1dd/page/45GEF')">
-                        <i class="lab la-vuejs"></i><span>FIPL | Needle Plan</span></a>
-                </li>
-                
-                <li class="item">
-                    <a href="#" class="menu-btn" onclick="changeVideo('https://lookerstudio.google.com/embed/reporting/dd00b4db-ad47-473f-80e7-f6db8f34d1dd/page/45GEF')">
-                        <i class="las la-share-square"></i><span>FIPL | Needle issue Register</span></a>
-                </li>
-                
-
-                
-                <!--
-             
-             <li class="item" id="menu5">
-               <a href="#menu5" class="menu-btn">
-                   <i class="las la-table"></i>
-                     <span>GSD Dashboard <i class="fas fa-chevron-down drop-down"></i></span>
-               </a>
-               <div class="sub-menu">
-                   <a href="#" onclick="changeVideo('https://lookerstudio.google.com/embed/reporting/91f7d058-22fa-4275-a2a1-d72265dd1aeb/page/p_r2f75v4t7c')">
-                     <i class="las la-tasks"></i><span>OB TCR Indents </span></a>
-                   <a href="https://docs.google.com/spreadsheets/d/1cBwBwdON2qmixcE8r9a7gDn8VjUEF1hsSxToUXIDmCM/edit#gid=938276129?usp=sharing" target="_blank">
-                     <i class="las la-file-invoice-dollar"></i><span>Style allotted details</span></a>
-                   <a href="#"><i class="las la-edit"></i><span>Cutting & Finishing Efficiency </span></a>
-               </div>
-               </li> 
--->
-
-                <li class="item">
-                    <a href="#" class="menu-btn" onclick="changeVideo('https://script.google.com/macros/s/AKfycbwLEfrPJFzrSO7zbtauJhLrfx9QQXc4f2bSIeHUHvGCyx9QoKtOl4JA1F0IcIspuaX3/exec')">
-                        <i class="las la-file-alt"></i><span>TSPL Process Doc</span> </a>
-                </li>
-
-
-                <li class="item">
-                    <a href="#" class="menu-btn" onclick="changeVideo('https://lookerstudio.google.com/embed/reporting/72b4579b-c9df-4c3e-a280-34d564205d14/page/p_cvjd9osd8c')">
-                        <i class="las la-user-circle"></i><span>Contact Me</span> </a>
-                    <!-- <a href="#" class="menu-btn" onclick="changeVideo('https://lookerstudio.google.com/embed/reporting/72b4579b-c9df-4c3e-a280-34d564205d14/page/p_cvjd9osd8c')">
-                  <i class="las la-address-book"></i><span>Contact Me1</span> </a> -->
-                </li>
-
-
-                <li class="item">
-                    <a href="#" class="menu-btn">
-                        <i class="las la-info-circle"></i><span>About</span>
-                    </a>
-                </li>
-
-
-            </div>
-        </div>
-        <!--sidebar end-->
-        <!--main container start-->
-        <div class="main-container" id="videoContainer">
-            <iframe src="home.html" width="100%" height="100%" frameborder="0"></iframe>
+            </ul>
         </div>
     </div>
+    <!-- Header Menu End -->
+
+    <!-- Sidebar Start -->
+    <div class="sidebar">
+        <div class="sidebar-menu">
+            <center class="profile">
+                <img src="img/TSIL_big.png" alt="">
+                <p>
+                    <a href="#" class="menu-btn main-container" onclick="changeVideo('home.html')">Link Unit Management</a>
+                </p>
+            </center>
+
+            <li class="item">
+                <a href="#" class="menu-btn" onclick="changeVideo('https://lookerstudio.google.com/embed/reporting/9e1780c1-e6ec-4152-8a39-f06907767a79/page/bxz5D')">
+                    <i class="las la-users-cog"></i><span>MMR Dashboard</span>
+                </a>
+            </li>
+
+            <li class="item">
+                <a href="#" class="menu-btn" onclick="changeVideo('https://lookerstudio.google.com/embed/reporting/7ff9d60c-dcee-4aa4-85c8-92c69836c519/page/bxz5D')">
+                    <i class="las la-file-invoice"></i><span>FIPL | KPI Dashboard</span>
+                </a>
+            </li>
+
+            <li class="item">
+                <a href="#" class="menu-btn" onclick="changeVideo('https://lookerstudio.google.com/embed/reporting/7ff9d60c-dcee-4aa4-85c8-92c69836c519/page/bxz5D')">
+                    <i class="las la-chart-bar"></i><span>FIPL | Pro and eff%</span>
+                </a>
+            </li>
+
+            <li class="item">
+                <a href="#" class="menu-btn" onclick="changeVideo('https://lookerstudio.google.com/embed/reporting/f363df8a-46f2-41dc-92d9-7c693d711c69/page/XOGcE')">
+                    <i class="las la-file-invoice"></i><span>FIPL | FSA Dashboard</span>
+                </a>
+            </li>
+
+            <li class="item">
+                <a href="#" class="menu-btn" onclick="changeVideo('https://script.google.com/macros/s/AKfycbzal5eHrWT89JcYdqyshbcY_6GmjZQ71g0B3QbYxVAGKM2fgYJrAezP1KriqbzwKfn9Mg/exec')">
+                    <i class="las la-image"></i><span>FSA | Defect Images</span>
+                </a>
+            </li>
+
+            <li class="item">
+                <a href="#" class="menu-btn" onclick="changeVideo('https://script.google.com/macros/s/AKfycbyOzGGqkAHfCAGrzauAVW6KP2mLRLV2sasBpc8dlx-UST6FM93gDmC8tAuboLw0E38qEQ/exec')">
+                    <i class="las la-file-invoice"></i><span>CFT Files</span>
+                </a>
+            </li>
+
+            <li class="item" id="menu4">
+                <a href="#menu4" class="menu-btn">
+                    <i class="lab la-vuejs"></i>
+                    <span>Needle Plan <i class="fas fa-chevron-down drop-down"></i></span>
+                </a>
+                <div class="sub-menu">
+                    
+                    <a href="#" onclick="changeVideo('https://lookerstudio.google.com/embed/reporting/bdd5de74-5165-4481-8e15-d4e28653bc75/page/4jwFF')">
+                        <i class="las la-desktop"></i><span>FIPL | Needle Dashboard</span>
+                    </a>
+                    
+                    
+                    <a href="#" onclick="changeVideo('https://lookerstudio.google.com/embed/reporting/6f46845d-3d0b-4919-a532-fb8f98587349/page/45GEF')">
+                        <i class="las la-file-invoice"></i><span>FIPL | Needle Plan</span>
+                    </a>
+
+                   
+                     <a href="ndl_test.html" target="_blank">
+                         <i class="las la-mobile-alt"></i><span>Needle Issue Form</span>
+                     </a>
+                 
+                    <a href="#" onclick="changeVideo('https://script.google.com/macros/s/AKfycbyqSELjqIkrCXfXEz1dI5vArD_kBatk4VvXs-nWLy5NIrPXGY0OrJlB1MSUpTY7tR4P9Q/exec')">
+                    <i class="las la-book"></i><span>Needle Ref Doc </span> </a>
+                
+                </div>
+            </li>
+
+            <li class="item">
+                <a href="#" class="menu-btn" onclick="changeVideo('https://script.google.com/macros/s/AKfycbwLEfrPJFzrSO7zbtauJhLrfx9QQXc4f2bSIeHUHvGCyx9QoKtOl4JA1F0IcIspuaX3/exec')">
+                    <i class="las la-book"></i><span>TSPL Process Doc</span>
+                </a>
+            </li>
+
+            <li class="item">
+                <a href="#" class="menu-btn" onclick="changeVideo('https://lookerstudio.google.com/embed/reporting/72b4579b-c9df-4c3e-a280-34d564205d14/page/p_cvjd9osd8c')">
+                    <i class="las la-id-card"></i><span>Contact Me</span>
+                </a>
+            </li>
+
+            <li class="item">
+                <a href="#" class="menu-btn">
+                    <i class="las la-info-circle"></i><span>About</span>
+                </a>
+            </li>
+        </div>
+    </div>
+    <!-- Sidebar End -->
+
+    <!-- Main Container Start -->
+    <div class="main-container" id="videoContainer">
+        <iframe src="home.html" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+    <!-- Main Container End -->
+
+</div>
+<!-- Wrapper End -->
     <!--wrapper end-->
 
     <script>
