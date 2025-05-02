@@ -8,7 +8,8 @@ const userGroups = {
     users7: { redirect: "line_plan.html", users: [{ username: "ppd", password: "ppd123" }] },
     users8: { redirect: "obmc.html", users: [{ username: "ombc", password: "obcm123" }] },
     users9: { redirect: "unit_fipl.html", users: [{ username: "fipl", password: "fipl991" }] },
-    users10: { redirect: "unit_ts2.html", users: [{ username: "ts2", password: "ts2771" }] }
+    users10: { redirect: "unit_ts2.html", users: [{ username: "ts2", password: "ts2771" }] },
+    users11: { redirect: "unit_ts4.html", users: [{ username: "ts4", password: "ts4321" }] }
 };
 
 // Login function
