@@ -6,7 +6,7 @@ const userGroups = {
     users5: { redirect: "q_qdt_dept.html", users: [{ username: "cft", password: "cft123" }] },
     users6: { redirect: "kpi_data.html", target: "_blank", users: [{ username: "kpi", password: "kpi123" }] },
     users7: { redirect: "ppd_line_plan.html", users: [{ username: "ppd", password: "ppd123" }] },
-    users8: { redirect: "obmc.html", users: [{ username: "obmc", password: "obmc123" }] },
+    users8: { redirect: "obmc.html", users: [{ username: "cmd", password: "cmd336" }] },
     users9: { redirect: "unit_fipl.html", users: [{ username: "fipl", password: "fipl991" }] },
     users10: { redirect: "unit_ts2.html", users: [{ username: "ts2", password: "ts2771" }] },
     users11: { redirect: "unit_ts4.html", users: [{ username: "ts4", password: "ts4321" }] },
