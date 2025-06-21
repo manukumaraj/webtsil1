@@ -1,5 +1,6 @@
 const userGroups = {
     users1: { redirect: "main_ho.html", users: [{ username: "ho", password: "tspl248" }, { username: "hr", password: "hr486" }] },
+    users2: { redirect: "main.html", users: [{ username: "ho", password: "ho123" }, { username: "hr", password: "hr123" }] },
     users3: { redirect: "gsd_dept.html", users: [{ username: "gsd", password: "gsd123" }] },
     users4: { redirect: "smp_dept.html", users: [{ username: "smp", password: "smp285" }] },
     users5: { redirect: "q_qdt_dept.html", users: [{ username: "cft", password: "cft123" }] },
