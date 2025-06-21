@@ -1,7 +1,7 @@
 const userGroups = {
     users1: { redirect: "main_ho.html", users: [{ username: "ho", password: "tspl248" }, { username: "hr", password: "hr486" }] },
     users3: { redirect: "gsd_dept.html", users: [{ username: "gsd", password: "gsd123" }] },
-    users4: { redirect: "smp_dept.html", users: [{ username: "smp", password: "smp123" }] },
+    users4: { redirect: "smp_dept.html", users: [{ username: "smp", password: "smp285" }] },
     users5: { redirect: "q_qdt_dept.html", users: [{ username: "cft", password: "cft123" }] },
     users6: { redirect: "kpi_data.html", target: "_blank", users: [{ username: "kpi", password: "kpi123" }] },
     users7: { redirect: "ppd_line_plan.html", users: [{ username: "ppd", password: "ppd123" }] },
