@@ -13,6 +13,7 @@ const userGroups = {
     users12: { redirect: "q_qdt_dept.html", users: [{ username: "cft", password: "cft123" }] },
     users13: { redirect: "unit_ppd.html", users: [{ username: "ppd", password: "ppd123" }] },
     users14: { redirect: "kpi_data.html", target: "_blank", users: [{ username: "kpi", password: "kpi123" }] },
+    users15: { redirect: "unit_cmp.html", users: [{ username: "cmp", password: "cmp988" }] },
 };
 
 // Login function
