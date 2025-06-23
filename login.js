@@ -9,7 +9,7 @@ const userGroups = {
     users8: { redirect: "unit_smp.html", users: [{ username: "smp", password: "smp285" }] },
     users9: { redirect: "unit_emb.html", users: [{ username: "emb", password: "emb974" }] },
     users10: { redirect: "unit_cmd.html", users: [{ username: "cmd", password: "cmd336" }] },
-    users11: { redirect: "gsd_dept.html", users: [{ username: "gsd", password: "gsd123" }] },
+    users11: { redirect: "unit_gsd.html", users: [{ username: "gsd", password: "gsd123" }] },
     users12: { redirect: "q_qdt_dept.html", users: [{ username: "cft", password: "cft123" }] },
     users13: { redirect: "unit_ppd.html", users: [{ username: "ppd", password: "ppd123" }] },
     users14: { redirect: "kpi_data.html", target: "_blank", users: [{ username: "kpi", password: "kpi123" }] },
