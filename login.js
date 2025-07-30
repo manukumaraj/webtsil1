@@ -15,7 +15,8 @@ const userGroups = {
     users14: { redirect: "kpi_data.html", target: "_blank", users: [{ username: "kpi", password: "kpi123" }] },
     users15: { redirect: "unit_cmp.html", users: [{ username: "cmp", password: "cmp988" }] },
     users16: { redirect: "unit_mrh.html", users: [{ username: "mrh", password: "mrh159" }] },
-    users17: { redirect: "main_ho_test.html", users: [{ username: "man", password: "man2975" }] }
+    users17: { redirect: "unit_bi.html", users: [{ username: "bi", password: "bi740" }] },
+    users18: { redirect: "main_ho_test.html", users: [{ username: "man", password: "man2975" }] }
 };
 
 // Login function
