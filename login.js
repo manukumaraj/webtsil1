@@ -3,7 +3,7 @@ const userGroups = {
     users2: { redirect: "main.html", users: [{ username: "ho", password: "ho123" }, { username: "hr", password: "hr123" }] },
     users3: { redirect: "unit_fipl.html", users: [{ username: "fipl", password: "fipl991" }] },
     users4: { redirect: "unit_ts2.html", users: [{ username: "ts2", password: "ts2771" }] },
-    users5: { redirect: "unit_ts4.html", users: [{ username: "ts4", password: "ts4321" }] },
+    users5: { redirect: "unit_ts4.html", users: [{ username: "ts4", password: "ts4934" }] },
     users6: { redirect: "unit_ts9.html", users: [{ username: "ts9", password: "ts9753" }] },
     users7: { redirect: "unit_ap2.html", users: [{ username: "ap2", password: "ap2244" }] },
     users8: { redirect: "unit_smp.html", users: [{ username: "smp", password: "smp285" }] },
@@ -79,3 +79,4 @@ document.addEventListener('DOMContentLoaded', () => {
         checkLogin();
     }
 });
+
