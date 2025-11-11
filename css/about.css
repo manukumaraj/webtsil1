@@ -1,5 +1,4 @@
-
-      /* About Modal Styles */
+/* About Modal Styles */
       .about-modal {
         position: fixed;
         top: 0;
@@ -77,4 +76,3 @@
         height: calc(100% - 60px);
         border: none;
       }
-    
