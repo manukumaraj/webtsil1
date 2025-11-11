@@ -1,4 +1,4 @@
-  // About Modal functionality
+// About Modal functionality
       document.addEventListener('DOMContentLoaded', function() {
         const aboutModal = document.getElementById('about-modal');
         const aboutBtn = document.getElementById('about-btn');
@@ -48,4 +48,3 @@
           }
         });
       });
- 
