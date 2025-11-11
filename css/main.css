@@ -323,33 +323,8 @@ footer.app-footer {
   color: var(--text);
 }
 
-/* Collapsed / mobile */
+/* Collapsed state only for desktop */
 .is-collapsed { grid-template-columns: 0 1fr; }
-@media (max-width: 1024px) {
-  .app { grid-template-columns: 0 1fr; }
-  .sidebar-overlay {
-    position: fixed; 
-    inset: var(--header-h) 0 var(--footer-h) 0; /* Adjusted for header and footer */
-    background: rgba(0,0,0,.4);
-    display: none; 
-    z-index: 30;
-  }
-  .sidebar-open .sidebar-overlay { display: block; }
-  .sidebar-open .app { grid-template-columns: min(80vw, var(--sidebar-w)) 1fr; }
-  
-  /* Adjust footer for mobile */
-  footer.app-footer {
-    flex-direction: column;
-    padding: 0.5rem 1rem;
-    height: auto;
-    min-height: var(--footer-h);
-  }
-  
-  .footer-left, .footer-right {
-    width: 100%;
-    justify-content: center;
-  }
-}
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; height: 8px; }
