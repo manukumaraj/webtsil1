@@ -13,23 +13,15 @@ function logout() {
 const $ = (sel, par=document) => par.querySelector(sel);
 const $$ = (sel, par=document) => Array.from(par.querySelectorAll(sel));
 
-// Sidebar toggle (desktop collapse + mobile overlay)
+// Sidebar toggle (desktop collapse only)
 const appRoot = $('#appRoot');
-const sidebarOverlay = $('#sidebarOverlay');
 const btnSidebar = $('#btnSidebar');
 
-const isNarrow = () => window.matchMedia('(max-width: 1024px)').matches;
-function openSidebar() { document.body.classList.add('sidebar-open'); }
-function closeSidebar() { document.body.classList.remove('sidebar-open'); }
 function toggleSidebar() {
-    if (isNarrow()) {
-        document.body.classList.toggle('sidebar-open');
-    } else {
-        appRoot.classList.toggle('is-collapsed');
-    }
+    appRoot.classList.toggle('is-collapsed');
 }
+
 btnSidebar.addEventListener('click', toggleSidebar);
-sidebarOverlay.addEventListener('click', closeSidebar);
 
 // ===== Fullscreen =====
 const btnFullscreen = $('#btnFullscreen');
@@ -68,7 +60,6 @@ function changeView(url) {
     if (!url) return;
     try {
         frame.src = url;
-        if (isNarrow()) closeSidebar();
     } catch (e) {
         console.error('Failed to set iframe src', e);
     }
