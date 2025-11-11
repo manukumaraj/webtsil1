@@ -8,7 +8,7 @@ const userGroups = {
     users6: { redirect: "unit_ts9.html", users: [{ username: "ts9", password: "ts9753" }] },
     users7: { redirect: "unit_ap2.html", users: [{ username: "ap2", password: "ap2244" }] },
     users8: { redirect: "dept_smp.html", users: [{ username: "smp", password: "smp285" }] },
-    users9: { redirect: "unit_emb.html", users: [{ username: "emb", password: "emb974" }] },
+    users9: { redirect: "dept_emb.html", users: [{ username: "emb", password: "emb974" }] },
     users10: { redirect: "dept_cmd.html", users: [{ username: "cmd", password: "cmd336" }] },
     users11: { redirect: "dept_gsd.html", users: [{ username: "gsd", password: "gsd266" }] },
     users12: { redirect: "dept_qty.html", users: [{ username: "cft", password: "cft123" }] },
@@ -190,3 +190,4 @@ function checkLogin() {
 // Initialize the application when DOM is loaded
 
 document.addEventListener('DOMContentLoaded', initApp);
+
