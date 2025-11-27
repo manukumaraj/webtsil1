@@ -1,6 +1,6 @@
 // User authentication data
 const userGroups = {
-    users1: { redirect: "main_ho.html", users: [{ username: "ho", password: "tspl248" }, { username: "im", password: "guest" }] },
+    users1: { redirect: "main_ho.html", users: [{ username: "ho", password: "tspl248" }, { username: "ima", password: "guest" }] },
     users2: { redirect: "main.html", users: [{ username: "ho", password: "ho123" }, { username: "hr", password: "hr123" }] },
     users3: { redirect: "unit_fipl.html", users: [{ username: "fipl", password: "fipl991" }] },
     users4: { redirect: "unit_ts2.html", users: [{ username: "ts2", password: "ts2771" }] },
@@ -190,5 +190,6 @@ function checkLogin() {
 // Initialize the application when DOM is loaded
 
 document.addEventListener('DOMContentLoaded', initApp);
+
 
 
