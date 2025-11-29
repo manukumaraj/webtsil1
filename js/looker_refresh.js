@@ -1,7 +1,7 @@
 // js/looker-refresh.js
 (function() {
     // <== CHANGE THIS to change refresh frequency (ms). Default: 5 minutes.
-    const REFRESH_MS = 1 * 60 * 1000;
+    const REFRESH_MS = 5 * 60 * 1000;
 
     let refreshTimer = null;
     const iframeId = 'mainFrame';
@@ -102,3 +102,4 @@
         intervalMs: REFRESH_MS
     };
 })();
+
