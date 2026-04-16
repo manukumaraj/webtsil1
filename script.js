@@ -1,6 +1,6 @@
 // User authentication data
 const userGroups = {
-    users1: { redirect: "main_ho.html", users: [{ username: "ho", password: "tspl248" }, { username: "ima", password: "guest" }] },
+    users1: { redirect: "main_ho.html", users: [{ username: "ho", password: "tspl248" }, { username: "hr", password: "hr486" }] },
     users2: { redirect: "main.html", users: [{ username: "ho", password: "ho123" }, { username: "hr", password: "hr123" }] },
     users3: { redirect: "unit_fipl.html", users: [{ username: "fipl", password: "fipl991" }] },
     users4: { redirect: "unit_ts2.html", users: [{ username: "ts2", password: "ts2771" }] },
@@ -8,7 +8,7 @@ const userGroups = {
     users6: { redirect: "unit_ts9.html", users: [{ username: "ts9", password: "ts9753" }] },
     users7: { redirect: "unit_ap2.html", users: [{ username: "ap2", password: "ap2244" }] },
     users8: { redirect: "dept_smp.html", users: [{ username: "smp", password: "smp285" }] },
-    users9: { redirect: "dept_emb.html", users: [{ username: "emb", password: "emb974" }] },
+    users9: { redirect: "unit_emb.html", users: [{ username: "emb", password: "emb974" }] },
     users10: { redirect: "dept_cmd.html", users: [{ username: "cmd", password: "cmd336" }] },
     users11: { redirect: "dept_gsd.html", users: [{ username: "gsd", password: "gsd266" }] },
     users12: { redirect: "dept_qty.html", users: [{ username: "cft", password: "cft123" }] },
@@ -17,8 +17,11 @@ const userGroups = {
     users15: { redirect: "dept_cmp.html", users: [{ username: "cmp", password: "cmp988" }] },
     users16: { redirect: "unit_mrh.html", users: [{ username: "mrh", password: "mrh159" }] },
     users17: { redirect: "unit_bi.html", users: [{ username: "bi", password: "bi740" }] },
-    users18: { redirect: "main_ho_test.html", users: [{ username: "man", password: "man2975" }] }
+    users18: { redirect: "main_ho_test.html", users: [{ username: "man", password: "man2975" }] },
+    users20: { redirect: "main_ho_test.html", users: [{ username: "man", password: "man2975" }] }, 
+    users19: { redirect: "dept_gsd_fc.html", users: [{ username: "gsdfc", password: "fc123" }] }
 };
+    
 
 // DOM elements
 const navbarMenu = document.querySelector(".navbar .links");
