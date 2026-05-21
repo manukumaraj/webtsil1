@@ -6,7 +6,7 @@ const userGroups = {
     users4: { redirect: "unit_ts2.html", users: [{ username: "ts2", password: "ts2771" }] },
     users5: { redirect: "unit_ts4.html", users: [{ username: "ts4", password: "ts4934" }] },
     users6: { redirect: "unit_ts9.html", users: [{ username: "ts9", password: "ts9753" }] },
-    users7: { redirect: "unit_ap2.html", users: [{ username: "ap2", password: "ap2244" }] },
+    users7: { redirect: "unit_ap2.html", users: [{ username: "ap2", password: "ap2951" }] },
     users8: { redirect: "dept_smp.html", users: [{ username: "smp", password: "smp285" }] },
     users9: { redirect: "dept_emb.html", users: [{ username: "emb", password: "emb974" }] },
     users10: { redirect: "dept_cmd.html", users: [{ username: "cmd", password: "cmd336" }] },
