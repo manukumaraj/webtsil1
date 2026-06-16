@@ -18,7 +18,8 @@ const userGroups = {
     users16: { redirect: "unit_mrh.html", users: [{ username: "mrh", password: "mrh159" }] },
     users17: { redirect: "unit_bi.html", users: [{ username: "bi", password: "bi740" }] },
     users18: { redirect: "main_ho_test.html", users: [{ username: "man", password: "man2975" }] },
-    users19: { redirect: "dept_gsd_fc.html", users: [{ username: "gsdfc", password: "fc123" }] }
+    users19: { redirect: "dept_gsd_fc.html", users: [{ username: "gsdfc", password: "fc123" }] },
+    users20: { redirect: "dept_fsa.html", users: [{ username: "sathish", password: "2008" }] }
 };
     
 
