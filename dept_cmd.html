@@ -1,3 +1,5 @@
+fix the error & bugs in this html pgae:
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -92,236 +94,6 @@
             height: calc(100% - 60px);
             border: none;
         }
-
-        /* Fix for missing CSS variables if not in main.css */
-        .app {
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-        }
-
-        .app-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background: #2c3e50;
-            color: white;
-            flex-shrink: 0;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .title {
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .title span {
-            color: #3498db;
-        }
-
-        .icon-btn {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.3rem;
-            cursor: pointer;
-            padding: 5px 8px;
-        }
-
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logout-chip {
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.2);
-            color: white;
-            padding: 6px 14px;
-            border-radius: 20px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 0.9rem;
-        }
-
-        .logout-chip:hover {
-            background: rgba(255,255,255,0.2);
-        }
-
-        .app-main {
-            flex: 1;
-            overflow: hidden;
-        }
-
-        .iframe-wrap {
-            width: 100%;
-            height: 100%;
-        }
-
-        .iframe-wrap iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .app-footer {
-            background: #f8f9fa;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            flex-shrink: 0;
-            border-top: 1px solid #dee2e6;
-            font-size: 0.8rem;
-        }
-
-        .footer-left, .footer-right {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-        }
-
-        .footer-link {
-            color: #6c757d;
-            text-decoration: none;
-        }
-
-        .footer-link:hover {
-            color: #2c3e50;
-        }
-
-        /* Sidebar styles - minimal for structure */
-        .sidebar {
-            width: 250px;
-            background: #2c3e50;
-            color: white;
-            height: 100%;
-            overflow-y: auto;
-            flex-shrink: 0;
-            position: fixed;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            transform: translateX(-100%);
-            transition: transform 0.3s ease;
-            z-index: 1001;
-        }
-
-        .sidebar.open {
-            transform: translateX(0);
-        }
-
-        .sidebar-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.5);
-            z-index: 1000;
-            display: none;
-        }
-
-        .sidebar-overlay.active {
-            display: block;
-        }
-
-        .sidebar-inner {
-            padding: 20px;
-        }
-
-        .profile {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .profile img {
-            max-width: 100px;
-            margin-bottom: 10px;
-        }
-
-        .menu-link {
-            color: #ecf0f1;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 8px 12px;
-            border-radius: 6px;
-            transition: background 0.2s;
-            cursor: pointer;
-            background: none;
-            border: none;
-            width: 100%;
-            font-size: 0.95rem;
-        }
-
-        .menu-link:hover {
-            background: rgba(255,255,255,0.1);
-        }
-
-        .menu-link i {
-            width: 20px;
-            text-align: center;
-        }
-
-        .single.group {
-            margin-bottom: 5px;
-        }
-
-        details.menu {
-            margin-bottom: 5px;
-        }
-
-        details.menu summary {
-            cursor: pointer;
-            padding: 8px 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        details.menu summary::-webkit-details-marker {
-            display: none;
-        }
-
-        .submenu {
-            padding-left: 20px;
-        }
-
-        .caret {
-            margin-left: auto;
-            transition: transform 0.3s;
-        }
-
-        details[open] .caret {
-            transform: rotate(180deg);
-        }
-
-        /* Fix for app layout with sidebar */
-        .app {
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            margin-left: 0;
-            transition: margin-left 0.3s ease;
-        }
-
-        .app.sidebar-open {
-            margin-left: 250px;
-        }
-
-        .app-header {
-            z-index: 1002;
-        }
     </style>
 </head>
 
@@ -352,7 +124,7 @@
         </header>
 
         <!-- Sidebar -->
-        <aside class="sidebar" id="sidebar" aria-label="Primary navigation">
+        <aside class="sidebar" aria-label="Primary navigation">
             <div class="sidebar-inner">
                 <div class="profile">
                     <img src="img/TSIL_big.png" alt="TSPL Logo" />
@@ -362,7 +134,7 @@
                 </div>
 
                 <nav>
-                    <!-- Single item: MMR Dashboard (commented out) -->
+                    <!-- Single item: MMR Dashboard -->
                     <!-- <div class="single group">
                         <a class="menu-link" href="#" data-embed="https://lookerstudio.google.com/embed/reporting/9e1780c1-e6ec-4152-8a39-f06907767a79/page/bxz5D">
                             <i class="las la-users-cog"></i>
@@ -407,7 +179,7 @@
                             <i class="fas fa-chevron-down caret" aria-hidden="true"></i>
                         </summary>
                         <div class="submenu">
-                            <!-- FIX: Removed duplicate FIPL entry and added rel="noopener" -->
+                            <!-- FIX 1: Removed duplicate FIPL entry and added target="_blank" to all -->
                             <a class="menu-link" href="https://docs.google.com/spreadsheets/d/1PzUHCBWccYa6twGBMD8IFpR-vaVN6u4qhK-qUwf4W4Q/edit?usp=sharing" target="_blank" rel="noopener"><i class="las la-file-invoice"></i><span>CMD | Mc List </span></a>
                             <a class="menu-link" href="https://docs.google.com/spreadsheets/d/19Tp4xb4Gb0UfkXHDYIjjQET-8H2JnJJk7BwL0demTWE/edit?usp=sharing" target="_blank" rel="noopener"><i class="las la-file-invoice"></i><span>FIPL | Mc List & Line Plan</span></a>
                             <a class="menu-link" href="https://docs.google.com/spreadsheets/d/1U-SejE8qkwk9RuBSAUj1jWKlZQcy5uKm8EjCQqwJcZY/edit?usp=sharing" target="_blank" rel="noopener"><i class="las la-file-invoice"></i><span>TS2 | Mc List & Line Plan</span></a>
@@ -425,13 +197,13 @@
                             <i class="fas fa-chevron-down caret" aria-hidden="true"></i>
                         </summary>
                         <div class="submenu">
-                            <!-- FIX: Added rel="noopener" for security -->
+                            <!-- FIX 2: Removed href="#" with data-embed since these are external links -->
                             <a class="menu-link" href="https://script.google.com/macros/s/AKfycbw2OfoeG37a94B1fRXmueE5u2JvD2x_PGlQMn24zT74a5p2XsC-6Gxm2p_zkZ4nsN7D/exec" target="_blank" rel="noopener"><i class="las la-file-invoice"></i><span>FIPL | Mc Plan Dashboard</span></a>
                             <a class="menu-link" href="https://script.google.com/macros/s/AKfycbwpehBUkg00CrvIMQWgiClMwOMQMskoT5aAXFYwQtP6XQjzwnpNYLXMW3NAr3UZiAgWzQ/exec" target="_blank" rel="noopener"><i class="las la-file-invoice"></i><span>TS2 | Mc Plan Dashboard</span></a>
                             <a class="menu-link" href="https://script.google.com/macros/s/AKfycbwA1K8eY7SrtP5zf2NtK2xyTuVDuYwnLGwly2_JwzlUs5Rg1fcLd_lyBQO1gVTP3xD1/exec" target="_blank" rel="noopener"><i class="las la-file-invoice"></i><span>TS4 | Mc Plan Dashboard</span></a>
                             <a class="menu-link" href="https://script.google.com/macros/s/AKfycbxIuGkT6RFQFXupEKQi3Xg9SMouSPsSlPkrvJ8-CmMu4Q1FJkwZjfv6NMmosNY_6GgAaw/exec" target="_blank" rel="noopener"><i class="las la-file-invoice"></i><span>TS9 | Mc Plan Dashboard</span></a>
                             <a class="menu-link" href="https://script.google.com/macros/s/AKfycbwuauq0paHktLzxWnyZvysuTwuN3ZFVCxi9Ch9MLzQmqqZoJ6LDp1wa2Y8icleVZSYcYg/exec" target="_blank" rel="noopener"><i class="las la-file-invoice"></i><span>AP2 | Mc Plan Dashboard</span></a>
-                            <a class="menu-link" href="https://script.google.com/macros/s/AKfycbwuauq0paHktLzxWnyZvysuTwuN3ZFVCxi9Ch9MLzQmqqZoJ6LDp1wa2Y8icleVZSYcYg/exec" target="_blank" rel="noopener"><i class="las la-file-invoice"></i><span>CMD | Mc Plan Dashboard</span></a>
+                            <a class="menu-link" href="https://script.google.com/macros/s/AKfycbzrcihOYxBLqMqnaP-pf5Xx2sZjdD4u2wSzKCJ_482tClwZvjnZKSEXnmEVKS3uvB_BOw/exec" target="_blank" rel="noopener"><i class="las la-file-invoice"></i><span>CMD | Mc Plan Dashboard</span></a>
                         </div>
                     </details>
 
